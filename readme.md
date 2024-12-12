@@ -32,6 +32,7 @@ Interfaz Combatiente:
 atacar(Combatiente objetivo): void
 recibirDanio(int danio): void
 estaVivo(): boolean
+
 Clase abstracta Personaje:
 
 Constructor(String nombre, int salud, int nivel, TipoArma arma)
@@ -46,46 +47,59 @@ atacar(Combatiente objetivo): void
 recibirDanio(int danio): void
 estaVivo(): boolean
 usarHabilidad(Combatiente objetivo): void (abstracto)
+
 Enum TipoArma:
 
 ESPADA, ARCO, BASTON, DAGA
+
 Interfaz Habilidad:
 
 ejecutar(Combatiente usuario, Combatiente objetivo): void
+
 Clase Guerrero (extiende Personaje):
 
 Constructor(String nombre, int salud, int nivel)
 atacar(Combatiente objetivo): void
 usarHabilidad(Combatiente objetivo): void
+
 Clase Mago (extiende Personaje):
 
 Constructor(String nombre, int salud, int nivel)
 atacar(Combatiente objetivo): void
 usarHabilidad(Combatiente objetivo): void
+
 Clase Arquero (extiende Personaje):
 
 Constructor(String nombre, int salud, int nivel)
 atacar(Combatiente objetivo): void
 usarHabilidad(Combatiente objetivo): void
+
 Clase ObjetoInventario:
 
 Constructor(String nombre, int valor)
 getNombre(): String
 getValor(): int
+
 Clase Batalla:
 
 simularCombate(Combatiente personaje1, Combatiente personaje2): void (estático)
+
 Clase JuegoRol:
 
 main(String[] args): void
+
 Clases de habilidades específicas (implementan Habilidad):
 
 EmbateGuerrero
+
 BolaDeFuegoMago
+
 FlechaPrecisaArquero
+
 Comparador para ObjetoInventario:
 
 Implementar Comparator<ObjetoInventario>
 compare(ObjetoInventario o1, ObjetoInventario o2): int
+
 Esta lista cubre todas las clases principales que necesitas implementar para el sistema de juego de rol. Recuerda que algunas clases, como las habilidades específicas, pueden requerir métodos adicionales según la lógica que quieras implementar.```
 
